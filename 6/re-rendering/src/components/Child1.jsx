@@ -9,6 +9,7 @@ const style = {
 };
 
 export const Child1 = memo((props) => {
+// export const Child1 = (props) => {
   console.log("Child1 レンダリング ");
 
   // Propsから関数を展開(分割代入)
@@ -22,4 +23,5 @@ export const Child1 = memo((props) => {
       <Child3 />
     </div>
   );
+// };
 });

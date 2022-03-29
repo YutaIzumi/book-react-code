@@ -6,6 +6,7 @@ export const App = memo(() => {
   console.log("App レンダリング ");
 
   const [num, setNum] = useState(0);
+  const aaa = 4;
 
   const onClickButton = () => {
     setNum(num + 1);
@@ -13,7 +14,12 @@ export const App = memo(() => {
 
   const onClickReset = useCallback(() => {
     setNum(0);
-  }, []);
+    console.log("reset num")
+  }, [num]);
+
+  // const onClickReset = () => {
+  //   setNum(0);
+  // };
 
   return (
     <>
