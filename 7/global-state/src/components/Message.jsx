@@ -16,6 +16,7 @@ export const Message = (props) => {
     <div>
       <p>{String(isAdmin)}</p>
       <p id={id}>メッセージを入力してください</p>
+      <p>{message}</p>
 	    <p><input type="text" name="name" onChange={changeMessage} /></p>
       <button onClick={onClickMessage}>メッセージ切り替え</button>
     </div>
