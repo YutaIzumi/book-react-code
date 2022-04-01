@@ -6,6 +6,7 @@ export const useFetchUsers = () => {
   const [userList, setUserList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
+  const [test, setTest] = useState(false);
 
   // ユーザー取得ボタン押下アクション
   const onClickFetchUser = () => {
@@ -15,8 +16,9 @@ export const useFetchUsers = () => {
 
     // APIの実行
     axios
-      .get("https://example.com/users")
+      .get("http://localhost:3000/posts")
       .then((result) => {
+        console.table(result.data);
         // 苗字と名前を結合するように変換
         const users = result.data.map((user) => ({
           id: user.id,
@@ -32,6 +34,10 @@ export const useFetchUsers = () => {
       .finally(() => setIsLoading(false));
   };
 
+  const isTest = () => {
+    setTest(!test);
+  } 
+
   // まとめて返却したいのでオブジェクトに設定する
-  return { userList, isLoading, isError, onClickFetchUser };
+  return { userList, isLoading, isError, onClickFetchUser, test, isTest };
 };

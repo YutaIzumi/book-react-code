@@ -1,0 +1,23 @@
+{
+    "posts":
+        [
+            {
+                "id": 1,
+                "firstname": "kappa",
+                "lastname": "midori",
+                "age": "100"
+            },
+            {
+                "id": 2,
+                "firstname": "baku",
+                "lastname": "mare",
+                "age": "9"
+            },
+            {
+                "id": 3,
+                "firstname": "sumikko",
+                "lastname": "kurashi",
+                "age": "2"
+            }
+        ]
+}

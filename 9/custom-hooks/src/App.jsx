@@ -1,9 +1,10 @@
 import { useFetchUsers } from "./hooks/useFetchUsers";
+import { List } from "./components/List";
 
 export const App = () => {
   // カスタムフックの使用
   // 関数を実行し返却値を分割代入で受け取る
-  const { userList, isLoading, isError, onClickFetchUser } = useFetchUsers();
+  const { userList, isLoading, isError, onClickFetchUser, test, isTest } = useFetchUsers();
 
   return (
     <div>
@@ -18,6 +19,10 @@ export const App = () => {
           <p key={user.id}>{`${user.id}:${user.name}(${user.age} 歳)`}</p>
         ))
       )}
+      <p>App</p>
+      <p>{String(test)}</p>
+      <button onClick={isTest}>test</button>
+      <List />
     </div>
   );
 };
