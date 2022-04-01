@@ -1,0 +1,24 @@
+{
+    "posts":
+        [
+            {
+                "id": 1,
+                "name": "kappa",
+                "age": 24,
+                "personalColor": "green"
+            },
+            {
+                "id": 2,
+                "name": "baku",
+                "age": 9,
+                "personalColor": "gray"
+            },
+            {
+                "id": 3,
+                "name": "sumikko",
+                "age": 12,
+                "personalColor": "blue",
+                "hobbies": ["game", "soccer"]
+            }
+        ]
+}

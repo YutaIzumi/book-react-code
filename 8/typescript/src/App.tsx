@@ -10,7 +10,7 @@ export const App = () => {
   // 画面表示時にユーザー情報取得
   // ※実際にはこのエンドポイントは存在しないので注意
   useEffect(() => {
-    axios.get<User[]>("https://example.com/users").then((res) => {
+    axios.get<User[]>("http://localhost:3000/posts").then((res) => {
       setUsers(res.data);
     });
   }, []);
